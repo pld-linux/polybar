@@ -87,7 +87,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc README.md SUPPORT.md
+%doc README.md SUPPORT.md config
 %attr(755,root,root) %{_bindir}/polybar
 %attr(755,root,root) %{_bindir}/polybar-msg
 %{_mandir}/man1/polybar.1*
