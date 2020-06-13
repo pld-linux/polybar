@@ -12,6 +12,7 @@ BuildRequires:	alsa-lib-devel
 BuildRequires:	cairo-devel
 BuildRequires:	cmake >= 3.1
 BuildRequires:	curl-devel
+BuildRequires:	i3
 BuildRequires:	i3-devel
 BuildRequires:	jsoncpp-devel >= 1.7.7
 BuildRequires:	libmpdclient-devel
@@ -19,6 +20,7 @@ BuildRequires:	libnl-devel
 BuildRequires:	libstdc++-devel >= 6:5.1
 BuildRequires:	libxcb-devel >= 1.12
 BuildRequires:	pkgconfig
+BuildRequires:	pulseaudio
 BuildRequires:	pulseaudio-devel
 BuildRequires:	python3 >= 3.5
 BuildRequires:	python3-Sphinx
