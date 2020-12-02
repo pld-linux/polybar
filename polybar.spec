@@ -1,12 +1,11 @@
 Summary:	Fast and easy-to-use status bar
 Name:		polybar
-Version:	3.4.3
-Release:	2
+Version:	3.5.0
+Release:	1
 License:	MIT, BSD
 Group:		X11/Window Managers
 Source0:	https://github.com/polybar/polybar/releases/download/%{version}/%{name}-%{version}.tar
-# Source0-md5:	a5db8e1946f72d80b7ae45776c59b6a4
-Patch0:		%{name}-consistent_python.patch
+# Source0-md5:	f6fda7f3b2063d72a10b69b9e57a701d
 URL:		https://polybar.github.io/
 BuildRequires:	alsa-lib-devel
 BuildRequires:	cairo-devel
@@ -69,7 +68,6 @@ zsh-completion for polybar.
 
 %prep
 %setup -q -n %{name}
-%patch0 -p1
 
 %build
 install -d build
@@ -93,6 +91,7 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_bindir}/polybar
 %attr(755,root,root) %{_bindir}/polybar-msg
 %{_mandir}/man1/polybar.1*
+%{_mandir}/man5/polybar.5*
 
 %files -n bash-completion-polybar
 %defattr(644,root,root,755)
