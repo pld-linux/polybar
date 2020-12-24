@@ -1,11 +1,11 @@
 Summary:	Fast and easy-to-use status bar
 Name:		polybar
-Version:	3.5.2
+Version:	3.5.3
 Release:	1
 License:	MIT, BSD
 Group:		X11/Window Managers
 Source0:	https://github.com/polybar/polybar/releases/download/%{version}/%{name}-%{version}.tar.gz 
-# Source0-md5:	07273d7ce23e3e770e13a82d7534a2b2
+# Source0-md5:	188c46519c214b3272c99f1d8bb898bf
 URL:		https://polybar.github.io/
 BuildRequires:	alsa-lib-devel
 BuildRequires:	cairo-devel
