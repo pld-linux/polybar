@@ -47,9 +47,7 @@ Summary:	bash-completion for polybar
 Group:		Applications/Shells
 Requires:	%{name} = %{version}-%{release}
 Requires:	bash-completion >= 2.0
-%if "%{_rpmversion}" >= "5"
 BuildArch:	noarch
-%endif
 
 %description -n bash-completion-polybar
 bash-completion for polybar.
@@ -60,9 +58,7 @@ Summary(pl.UTF-8):	Uzupełnianie nazw w zsh dla polybar
 Group:		Applications/Shells
 Requires:	%{name} = %{version}-%{release}
 Requires:	zsh
-%if "%{_rpmversion}" >= "5"
 BuildArch:	noarch
-%endif
 
 %description -n zsh-completion-polybar
 zsh-completion for polybar.
