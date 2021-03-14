@@ -1,11 +1,11 @@
 Summary:	Fast and easy-to-use status bar
 Name:		polybar
-Version:	3.5.4
+Version:	3.5.5
 Release:	1
 License:	MIT, BSD
 Group:		X11/Window Managers
 Source0:	https://github.com/polybar/polybar/releases/download/%{version}/%{name}-%{version}.tar.gz 
-# Source0-md5:	adc534fe17ce8fde1b4e77b04545cec2
+# Source0-md5:	90e4caf71e6220f14b8eaa5f65f71f22
 Patch0:		%{name}-mpd-overhead.patch
 URL:		https://polybar.github.io/
 BuildRequires:	alsa-lib-devel
@@ -22,7 +22,7 @@ BuildRequires:	libxcb-devel >= 1.12
 BuildRequires:	pkgconfig
 BuildRequires:	pulseaudio
 BuildRequires:	pulseaudio-devel
-BuildRequires:	python3 >= 3.5
+BuildRequires:	python3 >= 1:3.5
 BuildRequires:	python3-Sphinx
 BuildRequires:	python3-xcbgen
 BuildRequires:	rpmbuild(macros) >= 1.719
