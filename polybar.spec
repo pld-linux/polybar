@@ -7,6 +7,7 @@ Group:		X11/Window Managers
 Source0:	https://github.com/polybar/polybar/releases/download/%{version}/%{name}-%{version}.tar.gz 
 # Source0-md5:	3a9b19709d49ac9e86d875ed2570ff91
 Patch0:		%{name}-mpd-overhead.patch
+Patch1:		%{name}-net-speedrate-precison.patch
 URL:		https://polybar.github.io/
 BuildRequires:	alsa-lib-devel
 BuildRequires:	cairo-devel
@@ -66,6 +67,7 @@ zsh-completion for polybar.
 %prep
 %setup -q
 %patch0 -p1
+%patch1 -p1
 
 %build
 install -d build
