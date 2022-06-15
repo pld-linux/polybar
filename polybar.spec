@@ -1,17 +1,15 @@
 Summary:	Fast and easy-to-use status bar
 Name:		polybar
-Version:	3.5.7
+Version:	3.6.3
 Release:	1
 License:	MIT, BSD
 Group:		X11/Window Managers
 Source0:	https://github.com/polybar/polybar/releases/download/%{version}/%{name}-%{version}.tar.gz 
-# Source0-md5:	3a9b19709d49ac9e86d875ed2570ff91
-Patch0:		%{name}-mpd-overhead.patch
-Patch1:		%{name}-net-speedrate-precison.patch
+# Source0-md5:	6d51c4632b20c524f919c0a3b3a704f0
 URL:		https://polybar.github.io/
 BuildRequires:	alsa-lib-devel
 BuildRequires:	cairo-devel
-BuildRequires:	cmake >= 3.1
+BuildRequires:	cmake >= 3.5.0
 BuildRequires:	curl-devel
 BuildRequires:	i3
 BuildRequires:	i3-devel
@@ -19,6 +17,7 @@ BuildRequires:	jsoncpp-devel >= 1.7.7
 BuildRequires:	libmpdclient-devel
 BuildRequires:	libnl-devel
 BuildRequires:	libstdc++-devel >= 6:5.1
+BuildRequires:	libuv-devel >= 1.3.0
 BuildRequires:	libxcb-devel >= 1.12
 BuildRequires:	pkgconfig
 BuildRequires:	pulseaudio
@@ -35,6 +34,7 @@ BuildRequires:	xcb-util-image-devel
 BuildRequires:	xcb-util-wm-devel
 BuildRequires:	xcb-util-xrm-devel
 Requires:	jsoncpp >= 1.7.7
+Requires:	libuv >= 1.3.0
 Requires:	libxcb >= 1.12
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -66,8 +66,6 @@ zsh-completion for polybar.
 
 %prep
 %setup -q
-%patch0 -p1
-%patch1 -p1
 
 %build
 install -d build
@@ -87,10 +85,13 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc README.md SUPPORT.md config
+%doc README.md SUPPORT.md
+%dir %{_sysconfdir}/polybar
+%config(noreplace) %verify(not md5 mtime size) %{_sysconfdir}/polybar/config.ini
 %attr(755,root,root) %{_bindir}/polybar
 %attr(755,root,root) %{_bindir}/polybar-msg
 %{_mandir}/man1/polybar.1*
+%{_mandir}/man1/polybar-msg.1*
 %{_mandir}/man5/polybar.5*
 
 %files -n bash-completion-polybar
