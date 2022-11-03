@@ -1,7 +1,7 @@
 Summary:	Fast and easy-to-use status bar
 Name:		polybar
 Version:	3.6.3
-Release:	1
+Release:	2
 License:	MIT, BSD
 Group:		X11/Window Managers
 Source0:	https://github.com/polybar/polybar/releases/download/%{version}/%{name}-%{version}.tar.gz 
