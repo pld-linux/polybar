@@ -1,11 +1,11 @@
 Summary:	Fast and easy-to-use status bar
 Name:		polybar
-Version:	3.6.3
-Release:	2
+Version:	3.7.0
+Release:	1
 License:	MIT, BSD
 Group:		X11/Window Managers
 Source0:	https://github.com/polybar/polybar/releases/download/%{version}/%{name}-%{version}.tar.gz 
-# Source0-md5:	6d51c4632b20c524f919c0a3b3a704f0
+# Source0-md5:	111c4144083d34dedc048f2fc3d1af87
 URL:		https://polybar.github.io/
 BuildRequires:	alsa-lib-devel
 BuildRequires:	cairo-devel
@@ -16,7 +16,7 @@ BuildRequires:	i3-devel
 BuildRequires:	jsoncpp-devel >= 1.7.7
 BuildRequires:	libmpdclient-devel
 BuildRequires:	libnl-devel
-BuildRequires:	libstdc++-devel >= 6:5.1
+BuildRequires:	libstdc++-devel >= 6:9
 BuildRequires:	libuv-devel >= 1.3.0
 BuildRequires:	libxcb-devel >= 1.12
 BuildRequires:	pkgconfig
