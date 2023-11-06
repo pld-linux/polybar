@@ -25,6 +25,7 @@ BuildRequires:	pulseaudio-devel
 BuildRequires:	python3 >= 1:3.5
 BuildRequires:	python3-Sphinx
 BuildRequires:	python3-xcbgen
+BuildRequires:	rpm-build >= 4.6
 BuildRequires:	rpmbuild(macros) >= 1.719
 BuildRequires:	sphinx-pdg
 BuildRequires:	xcb-proto
@@ -76,7 +77,7 @@ cd build
 rm -rf $RPM_BUILD_ROOT
 
 %{__make} -C build install \
-        DESTDIR=$RPM_BUILD_ROOT
+	DESTDIR=$RPM_BUILD_ROOT
 
 %{__rm} -r $RPM_BUILD_ROOT%{_docdir}
 
