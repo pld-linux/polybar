@@ -6,6 +6,7 @@ License:	MIT, BSD
 Group:		X11/Window Managers
 Source0:	https://github.com/polybar/polybar/releases/download/%{version}/%{name}-%{version}.tar.gz
 # Source0-md5:	1c9273c7eef5b542448d6054d9aa3ac5
+Patch0:		includes.patch
 URL:		https://polybar.github.io/
 BuildRequires:	alsa-lib-devel
 BuildRequires:	cairo-devel
@@ -67,6 +68,7 @@ zsh-completion for polybar.
 
 %prep
 %setup -q
+%patch -P0 -p1
 
 %build
 install -d build

@@ -1,0 +1,22 @@
+From f99e0b1c7a5b094f5a04b14101899d0cb4ece69d Mon Sep 17 00:00:00 2001
+From: p_q <p_q@nebulae.co>
+Date: Wed, 10 Sep 2025 10:24:55 +0200
+Subject: [PATCH] Fix missing cstdint header for compiling with gcc15.
+
+See https://gcc.gnu.org/gcc-15/porting_to.html for the details.
+---
+ include/common.hpp | 1 +
+ 1 file changed, 1 insertion(+)
+
+diff --git a/include/common.hpp b/include/common.hpp
+index e6714c8fb..cb82fdf8c 100644
+--- a/include/common.hpp
++++ b/include/common.hpp
+@@ -7,6 +7,7 @@
+ #include <type_traits>
+ #include <utility>
+ #include <vector>
++#include <cstdint>
+ 
+ #include "settings.hpp"
+ 
